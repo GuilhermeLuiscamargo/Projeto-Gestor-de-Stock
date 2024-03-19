@@ -8,7 +8,7 @@ import ViewItem from "./components/ViewItem";
 import EditItem from "./components/EditItem";
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Projeto-Gestor-de-Stock",
     element: <Layout />,
     children: [
       {
