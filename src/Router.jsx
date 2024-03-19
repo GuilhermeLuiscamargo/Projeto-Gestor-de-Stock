@@ -13,11 +13,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "/",
+        path: "/Projeto-Gestor-de-Stock",
         element: <Dashbord />,
       },
       {
-        path: "/items",
+        path: "/Projeto-Gestor-de-Stock/items",
         element: <Items />,
         children: [
           {
