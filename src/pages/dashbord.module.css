@@ -1,0 +1,40 @@
+.infodiv {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.listas {
+  max-height: 630px;
+  display: flex;
+  justify-content: space-around;
+  overflow: auto;
+}
+/*responsividade*/
+
+/*1620x940*/
+@media (max-width: 1620px) {
+  .infodiv {
+    font-size: 0.9rem;
+    column-gap: 10px;
+  }
+  .listas {
+    max-height: 570px;
+  }
+}
+/*425x890*/
+@media (max-width: 428px) {
+  .infodiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+}
+/*450x890*/
+@media (max-width: 450px) {
+  .listas {
+    max-height: 500px;
+  }
+}

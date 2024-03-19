@@ -1,0 +1,90 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+.nav {
+  width: 90vw;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem;
+  color: rgba(251, 251, 251, 1);
+  backdrop-filter: blur(8px) saturate(171%);
+  -webkit-backdrop-filter: blur(8px) saturate(171%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  border: 1px solid rgba(248, 246, 246, 0.125);
+}
+.nav > p {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+.nav > span {
+  display: flex;
+  gap: 1rem;
+}
+.nav > span > a {
+  color: rgba(251, 251, 251, 1);
+  font-size: 1rem;
+  text-decoration: none;
+  border-bottom: 2px transparent solid;
+  transition: 0.3s;
+}
+.nav > span > a:hover {
+  border-bottom: 2px white solid;
+}
+.main {
+  width: 55vw;
+  max-height: 800px;
+  align-self: center;
+  /*filtro de transparencia*/
+  backdrop-filter: blur(8px) saturate(171%);
+  -webkit-backdrop-filter: blur(8px) saturate(171%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.footer {
+  color: rgba(251, 251, 251, 1);
+  text-align: center;
+  font-size: 1.4rem;
+}
+/* ----------------reposividade-----------------*/
+
+/*1620x940*/
+@media (max-width: 1620px) {
+  .main {
+    max-height: 750px;
+  }
+}
+/*850x1180*/
+@media (max-width: 850px) {
+  .main {
+    width: 80%;
+  }
+}
+/*770x890*/
+@media (max-width: 450px) {
+  .main {
+    width: 95%;
+  }
+}
+/*450x890*/
+@media (max-width: 450px) {
+  .nav {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+/*375x890*/
+@media (max-width: 375px) {
+  .footer {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .main {
+    width: 99%;
+  }
+}

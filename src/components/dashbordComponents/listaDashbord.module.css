@@ -1,0 +1,68 @@
+.table {
+  height: 100%;
+  border-spacing: 1rem;
+}
+.thead > tr > th {
+  font-size: 1.2rem;
+  color: rgba(251, 251, 251, 1);
+  border-bottom: 2px solid rgba(251, 251, 251, 1);
+}
+.tbody > tr > td {
+  color: rgba(251, 251, 251, 1);
+  padding-bottom: 0.5rem;
+  height: 10px;
+}
+.quantidadeTD {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+.default {
+  height: 2rem;
+  justify-self: center;
+  align-self: center;
+  margin: 10px;
+  color: rgba(251, 251, 251, 1);
+  font-size: 1rem;
+}
+.default > span:hover {
+  color: rgb(0, 191, 255);
+  border-bottom: 1px solid rgb(0, 191, 255);
+  transition: 0.5s;
+}
+
+/*responsividade*/
+
+/*1024x890*/
+@media (max-width: 1030px) {
+  .thead > tr > th {
+    font-size: 1rem;
+  }
+  .default {
+    font-size: 0.9rem;
+  }
+}
+/*450x890*/
+@media (max-width: 450px) {
+  .table {
+    border-spacing: 0.2rem;
+  }
+  .thead > tr > th {
+    font-size: 0.8rem;
+  }
+  .tbody > tr > td {
+    font-size: 0.7rem;
+  }
+  .default {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 320px) {
+  .thead > tr > th {
+    font-size: 0.7rem;
+  }
+  .default {
+    font-size: 0.7rem;
+  }
+}

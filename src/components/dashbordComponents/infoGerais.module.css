@@ -1,0 +1,41 @@
+.diversidade,
+.inventarioTotal,
+.recentes,
+.acabando {
+  color: rgba(251, 251, 251, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 6rem;
+  width: 13rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 15px;
+  border: 2px solid rgba(251, 251, 251, 1);
+}
+/*responsividade*/
+/*450x890*/
+@media (max-width: 450px) {
+  .acabando,
+  .diversidade,
+  .inventarioTotal,
+  .recentes {
+    width: 11rem;
+  }
+}
+@media (max-width: 375px) {
+  .acabando,
+  .diversidade,
+  .inventarioTotal,
+  .recentes {
+    width: 10rem;
+  }
+}
+@media (max-width: 320px) {
+  .acabando,
+  .diversidade,
+  .inventarioTotal,
+  .recentes {
+    width: 8.5rem;
+  }
+}

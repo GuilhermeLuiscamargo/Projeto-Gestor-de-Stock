@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  background-image: url("../imgs/fundo.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#root {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/*Estilo dos botoes da pagina*/
+.btnLista {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  /*color: #fffdfd;*/
+  font-size: 1rem;
+  border-radius: 0px;
+  width: 6.6rem;
+  height: 40px;
+  position: relative;
+  transition: 0.3s;
+  background-color: transparent;
+}
+
+.btnLista::before,
+.btnLista::after {
+  content: "";
+  display: block;
+  position: absolute;
+  /*border: 1px solid #ffffff;*/
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.btnLista::before {
+  top: -2px;
+  left: -2px;
+}
+
+.btnLista::after {
+  top: 2px;
+  left: 2px;
+}
+
+.btnLista:hover::before,
+.btnLista:hover::after {
+  top: 0;
+  left: 0;
+}
+/* botão atualizar color verde---------------------*/
+.btnAtu {
+  color: rgb(63, 246, 63);
+  border: 1px solid rgb(63, 246, 63);
+}
+.btnAtu::after,
+.btnAtuf::before {
+  border: 1px solid rgb(63, 246, 63);
+}
+/*botão excluir color vermelho-----------------------*/
+.btnExc {
+  color: rgb(249, 30, 30);
+  border: 1px solid rgb(249, 30, 30);
+}
+.btnExc::after,
+.btnExc::before {
+  border: 1px solid rgb(249, 30, 30);
+}
+/*botão cor padrão branco--------------------------------*/
+.btnpadrao {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+.btnpadrao::after,
+.btnpadrao::before {
+  border: 1px solid rgb(255, 255, 255);
+}
+/*botão cor save azul*/
+.btnSave {
+  color: rgb(0, 191, 255);
+  border: 1px solid rgb(0, 191, 255);
+}
+.btnSave::after,
+.btnSave::before {
+  border: 1px solid rgb(0, 191, 255);
+}
+/*-----------------------------------*/
+/*responsividade*/
+
+/*1620x940*/
+@media (max-width: 1620px) {
+  .btnLista {
+    font-size: 0.8rem;
+    width: 4rem;
+  }
+}
