@@ -6,7 +6,6 @@ export default function EditItem() {
   const listaItems = JSON.parse(localStorage.getItem("allItemsArr"));
   const { id } = useParams();
   const item = listaItems.find((item) => item.id === id);
-  console.log(item);
 
   const navigate = useNavigate();
   ////

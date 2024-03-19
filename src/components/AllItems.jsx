@@ -5,7 +5,7 @@ export default function AllItems() {
   const listaItemsArry = JSON.parse(localStorage.getItem("allItemsArr"));
   const [listaItems, setlistaItems] = useState(listaItemsArry);
   function excludeItem(id) {
-    if (true) {
+    if (confirm("tem certeza que deseja excluir?")) {
       const item = listaItemsArry.filter((item) => item.id !== id);
       setlistaItems(item);
       localStorage.setItem("allItemsArr", JSON.stringify(item));
