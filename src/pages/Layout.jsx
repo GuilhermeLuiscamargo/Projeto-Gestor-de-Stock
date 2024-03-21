@@ -7,8 +7,8 @@ export default function Layout() {
         <nav className={style.nav}>
           <p>Stock</p>
           <span>
-            <Link to="./">Inicio</Link>
-            <Link to="/items/allItems">Items</Link>
+            <Link to="/Projeto-Gestor-de-Stock/">Inicio</Link>
+            <Link to="/Projeto-Gestor-de-Stock/items/allItems">Items</Link>
           </span>
         </nav>
       </header>

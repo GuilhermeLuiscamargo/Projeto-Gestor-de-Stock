@@ -2,6 +2,7 @@ import style from "./infoGerais.module.css";
 
 export default function InfoGerais() {
   const listaItems = JSON.parse(localStorage.getItem("allItemsArr"));
+  console.log(listaItems);
   function getAllinventory() {
     let total = 0;
     if (listaItems) {
@@ -30,22 +31,28 @@ export default function InfoGerais() {
   }
   return (
     <>
-      <div className={style.diversidade}>
-        <p>Diversidade</p>
-        <p>{!listaItems ? 0 : listaItems.length}</p>
-      </div>
-      <div className={style.inventarioTotal}>
-        <p>Inventario Total</p>
-        <p>{getAllinventory()}</p>
-      </div>
-      <div className={style.recentes}>
-        <p>Itens Recentes</p>
-        <p>{getRecentItems()}</p>
-      </div>
-      <div className={style.acabando}>
-        <p>Itens Acabando </p>
-        <p>{getDefitItems()}</p>
-      </div>
+      {listaItems && listaItems.length > 0 ? (
+        <>
+          <div className={style.diversidade}>
+            <p>Diversidade</p>
+            <p>{!listaItems ? 0 : listaItems.length}</p>
+          </div>
+          <div className={style.inventarioTotal}>
+            <p>Inventario Total</p>
+            <p>{getAllinventory()}</p>
+          </div>
+          <div className={style.recentes}>
+            <p>Itens Recentes</p>
+            <p>{getRecentItems()}</p>
+          </div>
+          <div className={style.acabando}>
+            <p>Itens Acabando </p>
+            <p>{getDefitItems()}</p>
+          </div>
+        </>
+      ) : (
+        ""
+      )}
     </>
   );
 }

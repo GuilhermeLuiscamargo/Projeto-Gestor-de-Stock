@@ -6,14 +6,22 @@ export default function Items() {
     <>
       <div className={style.layout}>
         <Link
-          to="/items/allItems"
-          className={`${pathname === "/items/allItems" ? style.active : ""}`}
+          to="/Projeto-Gestor-de-Stock/items/allItems"
+          className={`${
+            pathname === "/Projeto-Gestor-de-Stock/items/allItems"
+              ? style.active
+              : ""
+          }`}
         >
           Todos os itens
         </Link>
         <Link
-          to="/items/novoItem"
-          className={`${pathname === "/items/novoItem" ? style.active : ""}`}
+          to="/Projeto-Gestor-de-Stock/items/novoItem"
+          className={`${
+            pathname === "/Projeto-Gestor-de-Stock/items/novoItem"
+              ? style.active
+              : ""
+          }`}
         >
           Novo item
         </Link>

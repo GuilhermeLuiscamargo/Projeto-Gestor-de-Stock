@@ -1,5 +1,5 @@
 import style from "./listaAllItems.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 export default function AllItems() {
   const listaItemsArry = JSON.parse(localStorage.getItem("allItemsArr"));
@@ -14,7 +14,7 @@ export default function AllItems() {
   ///
   return (
     <>
-      {listaItems.length ? (
+      {listaItems && listaItems.length > 0 ? (
         <table className={style.table}>
           <thead className={style.thead}>
             <tr>
@@ -33,10 +33,14 @@ export default function AllItems() {
                 <td>{item.quantidade}</td>
                 <td>{item.categoria}</td>
                 <td className={style.tdBtn}>
-                  <Link to={`/items/allItems/${item.id}`}>
+                  <Link
+                    to={`/Projeto-Gestor-de-Stock/items/allItems/${item.id}`}
+                  >
                     <button className="btnpadrao btnLista">ver</button>
                   </Link>
-                  <Link to={`/items/allitems/Edit/${item.id}`}>
+                  <Link
+                    to={`/Projeto-Gestor-de-Stock/items/allitems/Edit/${item.id}`}
+                  >
                     <button className="btnAtu btnLista">Atualizar</button>
                   </Link>
                   <button
@@ -51,7 +55,10 @@ export default function AllItems() {
           </tbody>
         </table>
       ) : (
-        <Link className={style.default} to="/items/novoItem">
+        <Link
+          className={style.default}
+          to="/Projeto-Gestor-de-Stock/items/novoItem"
+        >
           Não há itens no momento adicione um clicando aqui!
         </Link>
       )}

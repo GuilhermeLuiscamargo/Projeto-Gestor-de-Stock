@@ -26,7 +26,7 @@ export default function EditItem() {
     listaItems[indiceItem].atualização = new Date();
     localStorage.setItem("allItemsArr", JSON.stringify(listaItems));
     alert("item Atualizado com sucesso");
-    navigate("/items/allItems");
+    navigate("/Projeto-Gestor-de-Stock/items/allItems");
   }
   return (
     <>

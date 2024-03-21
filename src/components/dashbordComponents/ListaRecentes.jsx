@@ -5,13 +5,16 @@ export default function ListaRecentes() {
   const hoje = new Date();
   const limitDate = new Date();
   limitDate.setDate(limitDate.getDate() - 10);
-  const recentItems = listaArryItems.filter(
-    (item) =>
-      new Date(item.cadastro) >= limitDate && new Date(item.cadastro) <= hoje
-  );
+  const recentItems = listaArryItems
+    ? listaArryItems.filter(
+        (item) =>
+          new Date(item.cadastro) >= limitDate &&
+          new Date(item.cadastro) <= hoje
+      )
+    : undefined;
   return (
     <>
-      {recentItems.length > 0 ? (
+      {recentItems && recentItems.length > 0 ? (
         <table className={style.table}>
           <thead className={style.thead}>
             <tr>
@@ -24,7 +27,9 @@ export default function ListaRecentes() {
               <tr key={item.id}>
                 <td>{item.nome}</td>
                 <td>
-                  <Link to={`/items/allItems/${item.id}`}>
+                  <Link
+                    to={`/Projeto-Gestor-de-Stock/items/allItems/${item.id}`}
+                  >
                     <button className="btnLista btnpadrao">Ver</button>
                   </Link>
                 </td>
@@ -33,7 +38,10 @@ export default function ListaRecentes() {
           </tbody>
         </table>
       ) : (
-        <Link className={style.default} to="/items/novoItem">
+        <Link
+          className={style.default}
+          to="/Projeto-Gestor-de-Stock/items/novoItem"
+        >
           <span>Não há itens no momento adicione um clicando aqui!</span>
         </Link>
       )}

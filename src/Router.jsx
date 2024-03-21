@@ -8,12 +8,12 @@ import ViewItem from "./components/ViewItem";
 import EditItem from "./components/EditItem";
 const router = createBrowserRouter([
   {
-    path: "/Projeto-Gestor-de-Stock",
+    path: "/Projeto-Gestor-de-Stock/",
     element: <Layout />,
     children: [
       {
         index: true,
-        path: "/Projeto-Gestor-de-Stock",
+        path: "/Projeto-Gestor-de-Stock/",
         element: <Dashbord />,
       },
       {
@@ -21,19 +21,19 @@ const router = createBrowserRouter([
         element: <Items />,
         children: [
           {
-            path: "/items/allItems",
+            path: "/Projeto-Gestor-de-Stock/items/allItems",
             element: <AllItems />,
           },
           {
-            path: "/items/allItems/:id",
+            path: "/Projeto-Gestor-de-Stock/items/allItems/:id",
             element: <ViewItem />,
           },
           {
-            path: "/items/allitems/edit/:id",
+            path: "/Projeto-Gestor-de-Stock/items/allitems/edit/:id",
             element: <EditItem />,
           },
           {
-            path: "/items/novoItem",
+            path: "/Projeto-Gestor-de-Stock/items/novoItem",
             element: <NovoItem />,
           },
         ],

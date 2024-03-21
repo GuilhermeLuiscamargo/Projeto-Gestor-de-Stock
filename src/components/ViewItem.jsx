@@ -24,7 +24,7 @@ export default function ViewItem() {
       <div className={style.nomeItemDiv}>
         <h1>{item.nome}</h1>
         <div>
-          <Link to={`/items/allitems/edit/${id}`}>
+          <Link to={`/Projeto-Gestor-de-Stock/items/allitems/edit/${id}`}>
             <button className="btnLista btnAtu">Atualizar</button>
           </Link>
           <button

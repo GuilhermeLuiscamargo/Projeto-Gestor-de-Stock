@@ -2,12 +2,12 @@ import style from "./listaDashbord.module.css";
 import { Link } from "react-router-dom";
 export default function ListaAcabando() {
   const listaItems = JSON.parse(localStorage.getItem("allItemsArr"));
-  const listaItemsAcabando = listaItems.filter(
-    (item) => Number(item.quantidade) <= 10
-  );
+  const listaItemsAcabando = listaItems
+    ? listaItems.filter((item) => Number(item.quantidade) <= 10)
+    : undefined;
   return (
     <>
-      {listaItemsAcabando.length > 0 ? (
+      {listaItemsAcabando && listaItemsAcabando.length > 0 ? (
         <table className={style.table}>
           <thead className={style.thead}>
             <tr>
@@ -22,7 +22,9 @@ export default function ListaAcabando() {
                 <td>{item.nome}</td>
                 <td className={style.quantidadeTD}>{item.quantidade}</td>
                 <td>
-                  <Link to={`/items/allItems/${item.id}`}>
+                  <Link
+                    to={`/Projeto-Gestor-de-Stock/items/allItems/${item.id}`}
+                  >
                     <button className="btnLista btnpadrao">ver</button>
                   </Link>
                 </td>
