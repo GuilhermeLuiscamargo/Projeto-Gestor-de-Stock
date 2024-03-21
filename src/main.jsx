@@ -5,5 +5,5 @@ import router from "./Router.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} basename="Projeto-Gestor-de-Stock/" />
+  <RouterProvider router={router} basename="/Projeto-Gestor-de-Stock/" />
 );
