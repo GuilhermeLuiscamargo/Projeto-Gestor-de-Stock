@@ -1,8 +1,2 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+meu primeiro projeto SPA com reactJS e react-router-dom dá uma olhada https://guilhermeluiscamargo.github.io/Projeto-Gestor-de-Stock/
+Nesse projeto o intuito foi criar um gestor de stock que cria items com nome, preço, data de cadastro e de atualização ,quantidade ,categoria e descrição , atualiza as informações de um item em especifico ,deleta um item em especifico e salva esse item no Local Storage.
