@@ -2,7 +2,6 @@ import style from "./infoGerais.module.css";
 
 export default function InfoGerais() {
   const listaItems = JSON.parse(localStorage.getItem("allItemsArr"));
-  console.log(listaItems);
   function getAllinventory() {
     let total = 0;
     if (listaItems) {
