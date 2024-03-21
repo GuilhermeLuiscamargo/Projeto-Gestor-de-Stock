@@ -17,7 +17,7 @@ export default function ViewItem() {
       listaItems.splice(indice, 1);
     });
     localStorage.setItem("allItemsArr", JSON.stringify(listaItems));
-    navigate("/items/allItems");
+    navigate("/Projeto-Gestor-de-Stock/items/allItems");
   }
   return (
     <>
